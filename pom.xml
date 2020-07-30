@@ -67,5 +67,14 @@
 				<groupId>org.apache.pdfbox</groupId>
 			    <artifactId>pdfbox</artifactId>			
 			</dependency>
+			<!-- JavaFX11 -->
+			<dependency>
+ 				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-controls</artifactId>			  <version>${javafx-controls.version}</version>
+			</dependency>
+			<dependency>
+			  <groupId>org.openjfx</groupId>
+			  <artifactId>javafx-fxml</artifactId>			  <version>${javafx-fxml.version}</version>
+			</dependency>
 	</dependencies>
 </project>

@@ -66,7 +66,8 @@ public class ExcelUtil {
                 //遍历所有的列
                 List<Object> li = new ArrayList<Object>();
                 for (int y = row.getFirstCellNum(); y < row.getLastCellNum(); y++) {
-                    cell = row.getCell(y);
+                	cell = row.getCell(y);
+                	System.out.println(cell);
                     li.add(getCellValue(cell));
                 }
                 list.add(li);
@@ -93,7 +94,11 @@ public class ExcelUtil {
      * 描述：对表格中数值进行格式化
      */
     public static  Object getCellValue(Cell cell){
-        Object value = null;
+    	//如果读到空值，返回“”；
+    	if (cell == null) {
+			return " ";
+		}
+    	Object value = null;
         DecimalFormat df = new DecimalFormat("0");  //格式化字符类型的数字
         SimpleDateFormat sdf = new SimpleDateFormat("yyy-MM-dd");  //日期格式化
         DecimalFormat df2 = new DecimalFormat("0.00");  //格式化数字
